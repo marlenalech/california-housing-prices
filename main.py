@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 pd.set_option('display.max_columns', None)
+
+pd.set_option('display.width', None)
+
+df=pd.read_csv('housing (1).csv', sep=r'\s+', header=None)
+
 pd.set_option('display.width', 1000)
 
 nazwy_kolumn = [
