@@ -30,9 +30,6 @@ print(df.describe().T)
 print("\n--- braki danych ---")
 print(df.isnull().sum())
 
-#usuwanie braków danych
-df = df.dropna()
-
 #macierz korelacji
 macierz_korelacji = df.corr()
 print("\n--- Wykres 1: Mapa ciepła ---")
