@@ -3,7 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_csv('housing (1).csv')
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+
+df=pd.read_csv('housing (1).csv', sep=r'\s+', header=None)
 print("--1. PIERWSZE 5 WIERSZY --")
 print(df.head())
 
