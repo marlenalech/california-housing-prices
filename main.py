@@ -30,9 +30,6 @@ print(df.describe().T)
 print("\n--- braki danych ---")
 print(df.isnull().sum())
 
-#usuwanie braków danych
-df = df.dropna()
-
 #macierz korelacji
 macierz_korelacji = df.corr()
 print("\n--- Wykres 1: Mapa ciepła ---")
@@ -48,7 +45,7 @@ plt.title("Mapa ciepła korelacji - California Housing", fontsize=14)
 plt.tight_layout()
 plt.show()
 print("\n--- Wykres 2: Ranking najważniejszych cech wpływających na cenę ---")
-korelacja_z_cena = macierz_korelacji['median_house_value'].drop('media_house_value').sort_values()
+korelacja_z_cena = macierz_korelacji['MEDV'].drop('MEDV').sort_values()
 plt.figure(figsize=(9,5))
 korelacja_z_cena.plot(kind='barh', color='teal')
 plt.title("Korelacja cech z wartością domu (median_house_value)", fontsize=14)
